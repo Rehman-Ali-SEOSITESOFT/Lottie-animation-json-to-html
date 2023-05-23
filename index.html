@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation Project</title>
+     <style>
+        #animation-container{
+           height: 400px;
+           width: 400px;
+           /* background-color: blue; */
+        }
+     </style>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.11.0/lottie.min.js"
+      integrity="sha512-XCthc/WzPfa+oa49Z3TI6MUK/zlqd67KwyRL9/R19z6uMqBNuv8iEnJ8FWHUFAjC6srr8w3FMZA91Tfn60T/9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    
+  </head>
+  <body>
+    <div id="animation-container"></div>
+    <script>
+        var animation = bodymovin.loadAnimation({
+          container: document.getElementById("animation-container"),
+          path: "./animation.json",
+          renderer: "svg",
+          loop: true,
+          autoplay: true,
+          name: "Demo Animation",
+        });
+      </script>
+  </body>
+</html>
