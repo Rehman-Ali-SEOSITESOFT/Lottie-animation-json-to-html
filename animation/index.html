@@ -13,10 +13,7 @@
         }
      </style>
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.11.0/lottie.min.js"
-      integrity="sha512-XCthc/WzPfa+oa49Z3TI6MUK/zlqd67KwyRL9/R19z6uMqBNuv8iEnJ8FWHUFAjC6srr8w3FMZA91Tfn60T/9Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      src="./script.js"
     ></script>
     
   </head>
@@ -25,11 +22,13 @@
     <script>
         var animation = bodymovin.loadAnimation({
           container: document.getElementById("animation-container"),
-          path: "./animation.json",
-          renderer: "svg",
+          path: "./animation-tow.json",
+          // renderer: "svg",
           loop: true,
           autoplay: true,
-          name: "Demo Animation",
+          rendererSettings: {
+          progressiveLoad:false
+    },
         });
       </script>
   </body>
